@@ -55,4 +55,9 @@ public class TaskService {
 		return "Task deleted -" + taskId;
 	}
 
+	public List<Task> findBySeverityAssignee(int severity, String assignee) {
+
+		return repo.findBySeverityAssignee(severity, assignee);
+	}
+
 }

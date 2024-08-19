@@ -54,4 +54,11 @@ public class TaskController {
 		return service.deleteTask(id);
 	}
 
+	@GetMapping("/find/severityAndAssignee/{severity}/{assignee}")
+	public List<Task> customFindBySeverityAssignee(@PathVariable int severity, @PathVariable String assignee) {
+
+		return service.findBySeverityAssignee(severity, assignee);
+
+	}
+
 }
